@@ -5,13 +5,12 @@ charles_words=$(curl -H "apikey:1657cec9f088957" --form "file=@charles.jpg"  htt
 #echo $words
 
 # Replace the \r\n literals with semicolons
-jeff_words=$(sed 's/\\r\\n/;/g' <<<$jeff_words)
-charles_words=$(sed 's/\\r\\n/;/g' <<<$charles_words)
+jeff_words=$(sed 's/\\r\\n/;/g' <<< $jeff_words)
+charles_words=$(sed 's/\\r\\n/;/g' <<< $charles_words)
 
 # Strip off the leading and trailing quotes
 jeff_words=$(sed 's/\"//g' <<<$jeff_words)
 charles_words=$(sed 's/\"//g' <<<$charles_words)
-echo $jeff_words
 
 declare -A jeff_array
 declare -A charles_array
