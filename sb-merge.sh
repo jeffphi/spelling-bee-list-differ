@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-jeff_words=$(curl -H "apikey:1657cec9f088957" --form "file=@jeff.jpg"  https://api.ocr.space/Parse/Image | jq '.ParsedResults[0].ParsedText')
-charles_words=$(curl -H "apikey:1657cec9f088957" --form "file=@charles.jpg"  https://api.ocr.space/Parse/Image | jq '.ParsedResults[0].ParsedText')
+jeff_words=$(curl -H "apikey:xxxxx" --form "file=@jeff.jpg"  https://api.ocr.space/Parse/Image | jq '.ParsedResults[0].ParsedText')
+charles_words=$(curl -H "apikey:xxxxx" --form "file=@charles.jpg"  https://api.ocr.space/Parse/Image | jq '.ParsedResults[0].ParsedText')
 #echo $words
 
 # Replace the \r\n literals with semicolons
